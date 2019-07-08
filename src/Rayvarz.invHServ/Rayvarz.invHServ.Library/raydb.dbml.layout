@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 18.75, 8.5" name="raydb">
+  <DataContextMoniker Name="/raydbDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d589b7ae-449d-4b39-a4d7-d174ec3fce52" isExpanded="false" absoluteBounds="16.5, 1.375, 2, 0.45">
+      <DataClassMoniker Name="/raydbDataContext/ItemData" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d34edf6-343f-4685-a3be-50f7bdb14d64" absoluteBounds="16.515, 1.835, 1.9700000000000002, 22.940958658854164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="76681ebb-1a4d-41ed-84a1-b569af49f4ac" isExpanded="false" absoluteBounds="13.375, 1.375, 2, 0.45">
+      <DataClassMoniker Name="/raydbDataContext/InvDtlData" />
+      <nestedChildShapes>
+        <elementListCompartment Id="adaef094-8d88-47e7-a81c-5df810f717a2" absoluteBounds="13.39, 1.835, 1.9700000000000002, 14.479695638020832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(16.5 : 1.6); (15.375 : 1.6)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/raydbDataContext/ItemData/ItemData_InvDtlData" />
+      <nodes>
+        <classShapeMoniker Id="d589b7ae-449d-4b39-a4d7-d174ec3fce52" />
+        <classShapeMoniker Id="76681ebb-1a4d-41ed-84a1-b569af49f4ac" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1fb60838-48b5-4f85-87df-e36f08cdfb2f" isExpanded="false" absoluteBounds="10.75, 1.375, 2, 0.45">
+      <DataClassMoniker Name="/raydbDataContext/InvHdrData" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03d51da4-c17c-4327-b046-aa170058e999" absoluteBounds="10.765, 1.835, 1.9700000000000002, 7.1722412109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12.75 : 1.6); (13.375 : 1.6)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/raydbDataContext/InvHdrData/InvHdrData_InvDtlData" />
+      <nodes>
+        <classShapeMoniker Id="1fb60838-48b5-4f85-87df-e36f08cdfb2f" />
+        <classShapeMoniker Id="76681ebb-1a4d-41ed-84a1-b569af49f4ac" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="15df6f71-210f-450f-ba9e-6ed2d592a42c" isExpanded="false" absoluteBounds="7.625, 1.375, 2, 0.45">
+      <DataClassMoniker Name="/raydbDataContext/UserId" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9c2321b6-c0bd-4100-935f-3b18dc58ee8c" absoluteBounds="7.6400000000000006, 1.8350000000000009, 1.9700000000000002, 17.364217122395832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.625 : 1.6); (10.75 : 1.6)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/raydbDataContext/UserId/UserId_InvHdrData" />
+      <nodes>
+        <classShapeMoniker Id="15df6f71-210f-450f-ba9e-6ed2d592a42c" />
+        <classShapeMoniker Id="1fb60838-48b5-4f85-87df-e36f08cdfb2f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="81e7a4bf-e17f-45e9-a038-41dea886295c" isExpanded="false" absoluteBounds="1, 1.375, 2, 0.45">
+      <DataClassMoniker Name="/raydbDataContext/Func" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c5e9d52d-1a78-4234-80f7-716b9d5147a7" absoluteBounds="1.0149999999999997, 1.8350000000000009, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e50b7171-c171-4796-9c02-845268080fe2" absoluteBounds="4.625, 1.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/raydbDataContext/UserDomain" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a189190-190a-49c0-8bc7-edde138dc551" absoluteBounds="4.6400000000000006, 1.8350000000000009, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 1.6); (4.625 : 1.6)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/raydbDataContext/Func/Func_UserDomain" />
+      <nodes>
+        <classShapeMoniker Id="81e7a4bf-e17f-45e9-a038-41dea886295c" />
+        <classShapeMoniker Id="e50b7171-c171-4796-9c02-845268080fe2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.625 : 1.6); (6.625 : 1.6)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/raydbDataContext/UserId/UserId_UserDomain" />
+      <nodes>
+        <classShapeMoniker Id="15df6f71-210f-450f-ba9e-6ed2d592a42c" />
+        <classShapeMoniker Id="e50b7171-c171-4796-9c02-845268080fe2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9fd1a405-cc1d-4513-89c7-1a81dd6ad835" absoluteBounds="7.625, 6.5, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/raydbDataContext/InvH_Device" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d9e2f50-3792-4e5f-b7dd-769c224da4f6" absoluteBounds="7.64, 6.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fb3a050f-7d7a-4826-a3f5-1c218f8cc1f2" absoluteBounds="9.375, 3.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/raydbDataContext/InvH_userDevice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8adefbe1-dbb5-4904-8b73-da1be934307d" absoluteBounds="9.39, 3.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.4999995 : 6.5); (8.4999995 : 4.28929768880208); (9.375 : 4.28929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/raydbDataContext/InvH_Device/InvH_Device_InvH_userDevice" />
+      <nodes>
+        <classShapeMoniker Id="9fd1a405-cc1d-4513-89c7-1a81dd6ad835" />
+        <classShapeMoniker Id="fb3a050f-7d7a-4826-a3f5-1c218f8cc1f2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.5 : 1.825); (9.5 : 3.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/raydbDataContext/UserId/UserId_InvH_userDevice" />
+      <nodes>
+        <classShapeMoniker Id="15df6f71-210f-450f-ba9e-6ed2d592a42c" />
+        <classShapeMoniker Id="fb3a050f-7d7a-4826-a3f5-1c218f8cc1f2" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

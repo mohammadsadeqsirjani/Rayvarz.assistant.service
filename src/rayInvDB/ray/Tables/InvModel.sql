@@ -1,0 +1,12 @@
+﻿CREATE TABLE [ray].[InvModel](
+	[Model] [varchar](20) NOT NULL,
+	[ModelDsc] [varchar](60) NOT NULL,
+	[RowVersion] [timestamp] NOT NULL,
+	[RowGuid] [uniqueidentifier] NOT NULL,
+ CONSTRAINT [PK_INVMODEL] PRIMARY KEY CLUSTERED 
+(
+	[Model] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 80) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [ray].[InvModel] ADD  DEFAULT (newid()) FOR [RowGuid]

@@ -1,0 +1,6 @@
+base address:
+http://192.168.100.38/RayInvHApi
+-----------------api/InvDocTypes-------------------
+ActionName : GetList
+input: publicFilterModel
+output

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>rayInvDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{cdafb396-85db-4658-a6a2-1970b6c33fa0}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>rayInvDB</RootNamespace>
+    <AssemblyName>rayInvDB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultSchema>ray</DefaultSchema>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="ray\" />
+    <Folder Include="ray\Tables\" />
+    <Folder Include="ray\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="ray\Functions\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="ray\Stored Procedures\" />
+    <Folder Include="ray\User Defined Types" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="ray\Tables\Branch.sql" />
+    <Build Include="ray\Tables\Center.sql" />
+    <Build Include="ray\Tables\CenterGrp.sql" />
+    <Build Include="ray\Tables\Func.sql" />
+    <Build Include="ray\Tables\InvAddDocInf.sql" />
+    <Build Include="ray\Tables\InvAddDocInfHdr.sql" />
+    <Build Include="ray\Tables\InvArcSoh.sql" />
+    <Build Include="ray\Tables\InvCnsTyp.sql" />
+    <Build Include="ray\Tables\InvDoc.sql" />
+    <Build Include="ray\Tables\InvDocSt.sql" />
+    <Build Include="ray\Tables\InvDocTyp.sql" />
+    <Build Include="ray\Tables\InvDtlData.sql" />
+    <Build Include="ray\Tables\invhdrdata.sql" />
+    <Build Include="ray\Tables\InvModel.sql" />
+    <Build Include="ray\Tables\InvMstr.sql" />
+    <Build Include="ray\Tables\InvOrdr.sql" />
+    <Build Include="ray\Tables\InvPrd.sql" />
+    <Build Include="ray\Tables\InvRcptTyp.sql" />
+    <Build Include="ray\Tables\InvReqTyp.sql" />
+    <Build Include="ray\Tables\InvRfDoc.sql" />
+    <Build Include="ray\Tables\InvRtrnBuy.sql" />
+    <Build Include="ray\Tables\InvRtrnStr.sql" />
+    <Build Include="ray\Tables\InvSeri.sql" />
+    <Build Include="ray\Tables\InvSerial.sql" />
+    <Build Include="ray\Tables\InvUserLvl.sql" />
+    <Build Include="ray\Tables\ItemData.sql" />
+    <Build Include="ray\Tables\PartGrp.sql" />
+    <Build Include="ray\Tables\RaySys.sql" />
+    <Build Include="ray\Tables\RaySysSpc.sql" />
+    <Build Include="ray\Tables\RaySysYr.sql" />
+    <Build Include="ray\Tables\Store.sql" />
+    <Build Include="ray\Tables\Supplier.sql" />
+    <Build Include="ray\Tables\Unit.sql" />
+    <Build Include="ray\Tables\UserDomain.sql" />
+    <Build Include="ray\Tables\UserId.sql" />
+    <Build Include="ray\Tables\WrkShop.sql" />
+    <Build Include="ray\Views\InvAssistantVw_getPartGrpFullPath.sql" />
+    <Build Include="Security\ray.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="ray\Functions\InvAssistantFUNC_getFullPartGrpDscPath.sql" />
+    <Build Include="Security\ray_1.sql" />
+    <None Include="Scripts\ScriptsIgnoredOnImport.sql" />
+    <Build Include="ray\Stored Procedures\InvSp_FindPropertyFromItemData.sql" />
+    <Build Include="ray\Stored Procedures\InvSp_SelectDocReferDtl.sql" />
+    <Build Include="ray\Stored Procedures\InvSp_ValidSoh.sql" />
+    <Build Include="ray\Stored Procedures\InvSp_FillForceQty.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_Store_GetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_SelectDocRefer.sql" />
+    <Build Include="ray\User Defined Types\InvAssistantUdt_tinyIntList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_RefDocTypes_GetList.sql" />
+    <Build Include="ray\Functions\InvAssistantTVFUNC_RefDocTypes_GetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_SerialSoh_GetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_initScanDialog_serial.sql" />
+    <Build Include="ray\Functions\InvAssistantTVFUNC_SerialSoh_GetList.sql" />
+    <Build Include="ray\Functions\InvAssistantFUNC_getCurrentFiscalYear.sql" />
+    <Build Include="ray\Functions\InvAssistantFUNC_userHasMaxInvCnfrmLvl.sql" />
+    <Build Include="ray\Tables\InvAssistant_deliveryItems.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_DeliveryItems_AddUpdate.sql" />
+    <Build Include="ray\User Defined Types\InvAssistantUdt_deliveryItems.sql" />
+    <Build Include="ray\Tables\InvAssistant_barcodeStructure_hdr.sql" />
+    <Build Include="ray\Tables\InvAssistant_barcodeStructure_dtl.sql" />
+    <Build Include="ray\Functions\InvAssistantFUNC_getCurrentBarcodeStructureId.sql" />
+    <Build Include="ray\Functions\InvAssistantFUNC_exportFromBarcode.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_DeliveryItems_GetList.sql" />
+    <Build Include="ray\Functions\InvAssistantFUNC_getRaySysSpcInfVal.sql" />
+    <Build Include="ray\Functions\InvAssistantFUNC_getPartAdjectiveQty.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_initScanDialog.sql" />
+    <Build Include="ray\Functions\InvAssistantTVFUNC_ArcSoh_GetList.sql" />
+    <Build Include="ray\Functions\InvAssistantTVFUNC_initScanDialog_serial_validations.sql" />
+    <Build Include="ray\Functions\InvAssistantTVFUNC_initScanDialog_serial_infoList.sql" />
+    <Build Include="ray\Functions\InvAssistantTVFUNC_initScanDialog_serial_controls.sql" />
+    <Build Include="ray\User Defined Types\InvAssistantUdt_idDsc.sql" />
+    <Build Include="ray\User Defined Types\InvAssistantUdt_uiControlList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_invHdrData_GetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_invCnsTyp_GetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_invModel_GetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_invOrdr_GetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_invRcptTyp_GetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_invReqTyp_GetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_invRtrnBuy_GetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_invRtrnStr_GetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_partGrp_GetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_storeGetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_supplier_GetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_unit_GetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_insert_ItemData.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_edit_ItemData.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_itemData_GetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_GetLastAvailableParNoOfGrp.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_itemData_GetItemInfo_1.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_branch_GetList.sql" />
+    <Build Include="ray\Stored Procedures\InvAssistantSp_center_GetList.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="rayInvDB.refactorlog" />
+  </ItemGroup>
+</Project>

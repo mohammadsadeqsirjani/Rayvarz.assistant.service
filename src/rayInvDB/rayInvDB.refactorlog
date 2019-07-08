@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="4ec4a54c-9db5-4b90-ab81-c4cac8d08454" ChangeDateTime="02/15/2019 06:42:49">
+    <Property Name="ElementName" Value="[ray].[InvAssistantDeliveryItems].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ray].[InvAssistantDeliveryItems]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FiscalYear" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8f8bbc3c-daea-4cda-bdf9-c635b1a7d140" ChangeDateTime="02/15/2019 06:46:24">
+    <Property Name="ElementName" Value="[ray].[InvAssistantDeliveryItems].[serial]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ray].[InvAssistantDeliveryItems]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Barcode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e1a9e226-b236-4100-95fe-1cb374936a1b" ChangeDateTime="02/15/2019 06:47:04">
+    <Property Name="ElementName" Value="[ray].[InvAssistantDeliveryItems].[Barcode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ray].[InvAssistantDeliveryItems]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BarcodeStructure" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6e8f72ad-7d86-4c0c-81b9-c8ede3c6225d" ChangeDateTime="02/15/2019 08:31:07">
+    <Property Name="ElementName" Value="[ray].[InvAssistant_deliveryItems].[BarcodeStructure]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ray].[InvAssistant_deliveryItems]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="bigint" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6d25b90d-be34-4b8d-92ff-fd318f44134f" ChangeDateTime="02/15/2019 08:31:19">
+    <Property Name="ElementName" Value="[ray].[InvAssistant_deliveryItems].[bigint]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ray].[InvAssistant_deliveryItems]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="fk_barcodeStructure_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5af16ff9-cadf-4918-a982-97a488c5eb38" ChangeDateTime="02/15/2019 08:31:57">
+    <Property Name="ElementName" Value="[ray].[InvAssistant_barcodeStructure].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ray].[InvAssistant_barcodeStructure]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="351f0ecf-2df6-48ce-b816-e84192cdbef4" ChangeDateTime="02/15/2019 08:33:50">
+    <Property Name="ElementName" Value="[ray].[InvAssistant_barcodeStructure].[splitType]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ray].[InvAssistant_barcodeStructure]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="codeIdentificationType" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="80b44cd6-b4d9-4e6c-acbb-eca832ac8daf" ChangeDateTime="02/15/2019 08:38:02">
+    <Property Name="ElementName" Value="[ray].[InvAssistant_barcodeStructure]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[ray]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="InvAssistant_barcodeStructure_hdr" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="85a8d178-cae0-4f38-a84e-7bab98d9a7f2" ChangeDateTime="02/15/2019 08:39:50">
+    <Property Name="ElementName" Value="[dbo].[InvAssistant_barcodeStructure_dtl].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[InvAssistant_barcodeStructure_dtl]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="84e5db95-b259-425e-8f13-0b13e596b082" ChangeDateTime="02/15/2019 08:44:07">
+    <Property Name="ElementName" Value="[dbo].[InvAssistant_barcodeStructure_dtl].[startIndex]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[InvAssistant_barcodeStructure_dtl]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="length" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cfed6251-eda0-45e2-affb-deac066f62ed" ChangeDateTime="02/15/2019 09:02:59">
+    <Property Name="ElementName" Value="[ray].[FK_InvAssistant_deliveryItems_T]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[ray].[InvAssistant_deliveryItems]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_InvAssistant_deliveryItems_InvAssistant_barcodeStructure_hdr]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0e7d22b7-2913-488a-a1c8-7ee7ec92bd8f" ChangeDateTime="02/18/2019 19:55:49">
+    <Property Name="ElementName" Value="[ray].[InvAssistant_deliveryItems].[Barcode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[ray].[InvAssistant_deliveryItems]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[barcode]" />
+  </Operation>
+</Operations>

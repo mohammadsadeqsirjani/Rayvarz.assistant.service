@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="affcfc72ad234b70ac14c282dcf3f44e" Name="Diagram1" ZoomLevel="100">
+        <EntityTypeShape EntityType="RayDbModel.Center" Width="1.5" PointX="3" PointY="5.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="RayDbModel.CenterGrp" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="RayDbModel.InvDocTyp" Width="1.5" PointX="3" PointY="4.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="RayDbModel.InvDtlData" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="RayDbModel.InvHdrData" Width="1.5" PointX="3" PointY="7.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="RayDbModel.InvMstr" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="RayDbModel.ItemData" Width="1.5" PointX="3" PointY="2.75" IsExpanded="false" />
+        <AssociationConnector Association="RayDbModel.FK_CenterCenetrGrp" ManuallyRouted="false" />
+        <AssociationConnector Association="RayDbModel.FK_IInvDtlData_ReqCenter" ManuallyRouted="false" />
+        <AssociationConnector Association="RayDbModel.FK_InvDtlData_Act3" ManuallyRouted="false" />
+        <AssociationConnector Association="RayDbModel.FK_InvDtlData_Act4" ManuallyRouted="false" />
+        <AssociationConnector Association="RayDbModel.FK_InvDtlData_Act5" ManuallyRouted="false" />
+        <AssociationConnector Association="RayDbModel.FK_InvDtlDataCenter" ManuallyRouted="false" />
+        <AssociationConnector Association="RayDbModel.FK_ItemData_Act3" ManuallyRouted="false" />
+        <AssociationConnector Association="RayDbModel.FK_ItemData_Center" ManuallyRouted="false" />
+        <AssociationConnector Association="RayDbModel.FK_ItemData_InvDefCenter" ManuallyRouted="false" />
+        <AssociationConnector Association="RayDbModel.FK_InvHdrDataDocTyp" ManuallyRouted="false" />
+        <AssociationConnector Association="RayDbModel.FKF_InvDtlData_InvDocTyp_DocType" ManuallyRouted="false" />
+        <AssociationConnector Association="RayDbModel.FK_InvDtlDataHdrData" ManuallyRouted="false" />
+        <AssociationConnector Association="RayDbModel.FK_InvDtlDataItemData" ManuallyRouted="false" />
+        <AssociationConnector Association="RayDbModel.FK_InvMstrItemData" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RayDbModel.Func" Width="1.5" PointX="8" PointY="7.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="RayDbModel.InvOrdr" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="RayDbModel.InvPrd" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="RayDbModel.RaySys" Width="1.5" PointX="5.75" PointY="7.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="RayDbModel.RaySysSpc" Width="1.5" PointX="8" PointY="6.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="RayDbModel.Store" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="RayDbModel.UserDomain" Width="1.5" PointX="10.25" PointY="7.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="RayDbModel.UserId" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="false" />
+        <AssociationConnector Association="RayDbModel.FK_InvOrdr_Center" />
+        <AssociationConnector Association="RayDbModel.FK_StoreCenter" />
+        <AssociationConnector Association="RayDbModel.FK_FuncRaySys" />
+        <AssociationConnector Association="RayDbModel.FK_UserDomainFunc" />
+        <AssociationConnector Association="RayDbModel.FK_InvDtlDataOrdr" />
+        <AssociationConnector Association="RayDbModel.FKF_InvDtlData_InvPrd_FiscalYear" />
+        <AssociationConnector Association="RayDbModel.FKF_InvDtlData_Store_StoreNo" />
+        <AssociationConnector Association="RayDbModel.FK_InvHdrData_UserId" />
+        <AssociationConnector Association="RayDbModel.FK_InvHdrDataPrd" />
+        <AssociationConnector Association="RayDbModel.FK_InvHdrDataStore" />
+        <AssociationConnector Association="RayDbModel.FK_InvMstrPrd" />
+        <AssociationConnector Association="RayDbModel.FK_InvMstrStore" />
+        <AssociationConnector Association="RayDbModel.FK_InvOrdr_PartNo" />
+        <AssociationConnector Association="RayDbModel.FK_RaySys_RaySys" />
+        <AssociationConnector Association="RayDbModel.FK_RaySysSpcSys" />
+        <AssociationConnector Association="RayDbModel.FKF_UserDomain_RaySys_RaySys" />
+        <AssociationConnector Association="RayDbModel.FK_Store_DestStore" />
+        <AssociationConnector Association="RayDbModel.FK_Store_Store" />
+        <AssociationConnector Association="RayDbModel.FK_UserDomainUser" />
+        <EntityTypeShape EntityType="RayDbModel.Supplier" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="RayDbModel.Unit" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="false" />
+        <AssociationConnector Association="RayDbModel.FK_SupplierCenter" />
+        <AssociationConnector Association="RayDbModel.FK_InvDtlDataSupplier" />
+        <AssociationConnector Association="RayDbModel.FK_InvDtlDataUnit" />
+        <AssociationConnector Association="RayDbModel.FK_ITEMDATA_ITEMDATA__UNIT" />
+        <AssociationConnector Association="RayDbModel.FK_ItemDataBomUnt" />
+        <AssociationConnector Association="RayDbModel.FK_ItemDataHighUnt" />
+        <AssociationConnector Association="RayDbModel.FK_ItemDataLenUnt" />
+        <AssociationConnector Association="RayDbModel.FK_ItemDataOrdrUnt" />
+        <AssociationConnector Association="RayDbModel.FK_ItemDataPrtnUnt" />
+        <AssociationConnector Association="RayDbModel.FK_ItemDataSupplier" />
+        <AssociationConnector Association="RayDbModel.FK_ItemDataTtlUnt" />
+        <AssociationConnector Association="RayDbModel.FK_ItemDataUntCode" />
+        <AssociationConnector Association="RayDbModel.FK_ItemDataWghtUnt" />
+        <AssociationConnector Association="RayDbModel.FK_ItemDataWidthUnt" />
+        <EntityTypeShape EntityType="RayDbModel.InvRfDoc" Width="1.5" PointX="8.875" PointY="2" IsExpanded="false" />
+        <AssociationConnector Association="RayDbModel.FKF_InvRfDoc_InvDocTyp_DocType" />
+        <AssociationConnector Association="RayDbModel.FK_InvRfDocDtlData" />
+        <AssociationConnector Association="RayDbModel.FKF_InvRfDoc_InvPrd_FiscalYear" />
+        <AssociationConnector Association="RayDbModel.FK_InvRfDoc_ItemData" />
+        <AssociationConnector Association="RayDbModel.FK_InvRfDocPart" />
+        <AssociationConnector Association="RayDbModel.FKF_InvRfDoc_Store_StoreNo" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

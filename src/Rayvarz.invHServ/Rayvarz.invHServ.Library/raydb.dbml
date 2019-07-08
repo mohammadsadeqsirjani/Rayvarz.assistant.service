@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Atash" EntityNamespace="Rayvarz.invHServ.Library.entities" ContextNamespace="Rayvarz.invHServ.Library" Class="raydbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\MSSQLSERVER_2014;Initial Catalog=abamval_moredDar;User ID=sa" SettingsObjectName="Rayvarz.invHSyncServ.Library.Properties.Settings" SettingsPropertyName="abamval_moredDarConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="ray.ItemData" Member="ItemDatas">
+    <Type Name="ItemData">
+      <Column Name="PartNo" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PartNoDsc" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PartLtnDsc" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TechnicalNo" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="PartPrvNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PartGrp" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Supplier" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="InvDefCenter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Center" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UntCode" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="TtlUntCode" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="TtlUnt" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="PrtnUnt" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="OrdrUnt" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="BomUnt" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="ExchngTtlToInv" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ExchngPrtnToInv" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ExchngTtlToPrtn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ExchngOrdrToInv" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ExchngBomToInv" Type="System.Decimal" DbType="Decimal(38,9)" CanBeNull="true" />
+      <Column Name="ExchangeTtlUntToUnt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ExchngSaleToDis" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="RcptType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ConsType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MapNo" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="KeepType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ImpType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="UsedCode" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ProdType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="TransportType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="TrnsPkgTyp" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="PureWght" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="UnpureWght" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BoxWght" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="WghtUnt" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="Length" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="LenUnt" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="Width" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="WidthUnt" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="High" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="HighUnt" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="MultyMediaDoc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MultyMediaDocX" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="OrderMetType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ToolRate" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TimeOfProcure" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SpanTime" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="MinOrderPoint" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="AvgMonCons" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SafetyStock" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="OrderPoint" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="OptmOrdQty" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="LeadTime" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="IsPrdBatch" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ExpDue" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="PartSpecId1" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PartSpecId2" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PartSpecId3" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PartSpecId4" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PartAdjTyp1" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="PartAdjTyp2" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="PartAdjTyp3" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="PartAdjTyp4" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Salable" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IsMakePart" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IsMtrl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IsMchnPart" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IsTools" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IsAsset" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IsMold" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ISOfsTool" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IsConsTool" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IsFccPart" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="OrdrNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="NotActiv" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IsCut" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DisMinReq" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MinFeed" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MaxFeed" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="AmtPtn" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DisPrdPercent" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PurityDegree" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PurityDegreeRatio" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="IsFeed" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="OlympPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="IsExpired" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="CostAccType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SaleRsv" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PrdPartType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ExpiredDuration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsSCMMaterial" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="WUPkgTyp" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="IncDeliver" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="IsPrdPart" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="UnqDsc" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Sarakperc" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="StorePerc" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="StoreAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="LastChngDate" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="NationalPartCod" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Act3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PurityDegreePharmacy" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CostomsNo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PartComent" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="ItemCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PrdPartGrp" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="AstCoClassify" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AstDpType" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="AstUsedTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AstDpRate" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="AstUnt" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="branch_filter_spec" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="[_branch_filter_spec]" Member="_branch_filter_spec" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="Categorize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsPack" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IsShop" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IsLabTools" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="ItemData_InvDtlData" Member="InvDtlDatas" ThisKey="PartNo" OtherKey="PartNo" Type="InvDtlData" />
+    </Type>
+  </Table>
+  <Table Name="ray.InvDtlData" Member="InvDtlDatas">
+    <Type Name="InvDtlData">
+      <Column Name="FiscalYear" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StoreNo" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DocType" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DocNo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DestStoreNo" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="StkCountNo" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CountNo" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DocEntStatus" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DocRow" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PartNo" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Serial" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Center" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DocDate" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="UntCode" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="Qty" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="AudtQty" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="RefConsQty" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="RefOrder" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Amt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CompAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="AudtAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ConsType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RcptType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReqType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="RtrnStrReason" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="RtrnBuyReason" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ReqCenter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Supplier" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="OrderNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="BinNo" Type="System.String" DbType="VarChar(35)" CanBeNull="true" />
+      <Column Name="RegNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LcNo" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="NeedDate" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="AudtReason" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="PrcDate" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="PrcSeqDoc" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="RefStatus" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DetValSeq" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="AccDocSeq" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Weight" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="RtnQty" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="RfDocNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RfDocRow" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="AccDocNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SetPrice" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="UpdTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SetVoid" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="IsNewYear" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="FactorNo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="SalePartNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="SaleQty" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SaleRow" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="TraceKey" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="StoreAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Act3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TollAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TaxAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="DocDsc" Type="System.String" DbType="VarChar(6000)" CanBeNull="true" />
+      <Column Name="FactorDate" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="TreatyNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="OldRow" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="GdiRefDocNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GdiRefDocRow" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GdiRefPartNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="GdiRefStore" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="FromPlaque" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ToPlaque" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CntQty" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="OrgPelakNo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FlwCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DespositRng" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MeetingDate" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="Act4" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Act5" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ItemData_InvDtlData" Member="ItemData" ThisKey="PartNo" OtherKey="PartNo" Type="ItemData" IsForeignKey="true" />
+      <Association Name="InvHdrData_InvDtlData" Member="InvHdrData" ThisKey="FiscalYear,StoreNo,DocType,DocNo,CountNo" OtherKey="FiscalYear,StoreNo,DocType,DocNo,CountNo" Type="InvHdrData" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="ray.InvHdrData" Member="InvHdrDatas">
+    <Type Name="InvHdrData">
+      <Column Name="FiscalYear" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StoreNo" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DocType" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DocNo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CountNo" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DocSeq" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DestStoreNo" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="StkCountNo" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DocEntStatus" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DocStatus" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="UpdateSeq" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SendSeq" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ValueSeq" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="AccDocSeq" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SumQty" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SumAmt" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="MultyMediaDoc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MultyMediaDocX" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="OrgDocNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrgRefNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LockInd" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="CnfrmLvl" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="EndRcpt" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="RaySys" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="PriceDocSt" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DocCounter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsSendAst" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="GdiRefDocNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GdiRefFiscalYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GdiRefDocType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BuyType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SumWeight" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="IsEditAcnt" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="UserId" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Association Name="InvHdrData_InvDtlData" Member="InvDtlDatas" ThisKey="FiscalYear,StoreNo,DocType,DocNo,CountNo" OtherKey="FiscalYear,StoreNo,DocType,DocNo,CountNo" Type="InvDtlData" />
+      <Association Name="UserId_InvHdrData" Member="UserId1" ThisKey="UserId" OtherKey="UserId1" Type="UserId" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ray.UserId" Member="UserIds">
+    <Type Name="UserId">
+      <Column Name="UserId" Member="UserId1" Type="System.String" DbType="VarChar(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserLtnName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PassWord" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="NetUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="PWSettingDat" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="BuyGrp" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="BuyFlwGrp" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="BuyGrpMng" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="BuyFlwGrpMng" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="BuyCstmPrs" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="BuySrcSup" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntLung" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntEdtTyp" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntDspFrSeri1" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntDspFrSeri2" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntDspFrSeri3" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntDspToSeri1" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntDspToSeri2" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntDspToSeri3" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntAddFrSeri1" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntAddFrSeri2" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntAddFrSeri3" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntAddToSeri1" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntAddToSeri2" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntAddToSeri3" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntChgFrSeri1" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntChgFrSeri2" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntChgFrSeri3" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntChgToSeri1" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntChgToSeri2" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntChgToSeri3" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntDltFrSeri1" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntDltFrSeri2" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntDltFrSeri3" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntDltToSeri1" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntDltToSeri2" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntDltToSeri3" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntCnfFrSeri1" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntCnfFrSeri2" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntCnfFrSeri3" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntCnfToSeri1" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntCnfToSeri2" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AcntCnfToSeri3" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="CashLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="OaUnitCod" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="OaIsResponsible" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="InvStore" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="InvCnfrmLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="InvSystemType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="InvImplType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="PayHokmLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="PayEblagLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="PayExtraLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="PayVarLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="PayExlLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="PayOutLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="PayLoanLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="PayLoanReqLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="PayCostLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="PayMissionLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="PayEvalLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="PayWrkTimLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="PayDayoffReqLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ShopStore" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="ShopSystemType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ShopCnfrmLvl" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ShopStoreCash" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="SaleStore" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="AstUpdOpt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AstUpdCard" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AstUsrTyp" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ActnCenter" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="EmpTypPermission" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="SaleSerial" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SaleDocHeader" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SaleDocDateHdrPermit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AstTrustGrp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SaleCstmrGrp" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="SaleSaleType" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CrncyDailyPrcHdrPermit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FirstLogin" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MstrUserId" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="SalePartGrp" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="RowGUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RowVersion" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="UserId_InvHdrData" Member="InvHdrDatas" ThisKey="UserId1" OtherKey="UserId" Type="InvHdrData" />
+      <Association Name="UserId_UserDomain" Member="UserDomains" ThisKey="UserId1" OtherKey="UserId" Type="UserDomain" />
+      <Association Name="UserId_InvH_userDevice" Member="InvH_userDevices" ThisKey="UserId1" OtherKey="fk_userId" Type="InvH_userDevice" />
+    </Type>
+  </Table>
+  <Table Name="ray.Func" Member="Funcs">
+    <Type Name="Func">
+      <Column Name="RaySys" Type="System.String" DbType="VarChar(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Func" Member="Func1" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FuncDsc" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="FuncLtnDsc" Type="System.String" DbType="VarChar(45)" CanBeNull="true" />
+      <Column Name="MainFunc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Srt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AnyBranch" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ProjectTyp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FuncStat" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="FuncAct" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ShortcutKey" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ToolbarSort" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="HasSeparator" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="UsrAdd" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="FuncIconKey" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="MRSFunc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OldFunc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ToolBarProjectTyp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ToolBarDsc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ToolBarLtnDsc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WebFuncAct" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="MRSFuncRaySys" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="RowGUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RowVersion" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="Func_UserDomain" Member="UserDomains" ThisKey="RaySys,Func1" OtherKey="RaySys,Func" Type="UserDomain" />
+    </Type>
+  </Table>
+  <Table Name="ray.UserDomain" Member="UserDomains">
+    <Type Name="UserDomain">
+      <Column Name="UserId" Type="System.String" DbType="VarChar(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RaySys" Type="System.String" DbType="VarChar(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Branch" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Func" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RowGUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RowVersion" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Association Name="Func_UserDomain" Member="Func1" ThisKey="RaySys,Func" OtherKey="RaySys,Func1" Type="Func" IsForeignKey="true" />
+      <Association Name="UserId_UserDomain" Member="UserId1" ThisKey="UserId" OtherKey="UserId1" Type="UserId" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ray.InvH_Device" Member="InvH_Devices">
+    <Type Name="InvH_Device">
+      <Column Name="Id" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="InvH_Device_InvH_userDevice" Member="InvH_userDevices" ThisKey="Id" OtherKey="fk_deviceId" Type="InvH_userDevice" />
+    </Type>
+  </Table>
+  <Table Name="ray.InvH_userDevice" Member="InvH_userDevices">
+    <Type Name="InvH_userDevice">
+      <Column Name="fk_deviceId" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fk_userId" Type="System.String" DbType="VarChar(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="token" Type="System.String" DbType="VarChar(36)" CanBeNull="true" />
+      <Column Name="lastLoginTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="InvH_Device_InvH_userDevice" Member="InvH_Device" ThisKey="fk_deviceId" OtherKey="Id" Type="InvH_Device" IsForeignKey="true" />
+      <Association Name="UserId_InvH_userDevice" Member="UserId" ThisKey="fk_userId" OtherKey="UserId1" Type="UserId" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

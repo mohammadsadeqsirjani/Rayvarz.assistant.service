@@ -1,0 +1,146 @@
+USE [zave]
+GO
+/****** Object:  Table [dbo].[sam_InvDtlData]    Script Date: 07/16/2017 10:48:37 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[sam_InvDtlData](
+	[FiscalYear] [int] NOT NULL,
+	[StoreNo] [varchar](6) NOT NULL,
+	[DocType] [tinyint] NOT NULL,
+	[DocNo] [int] NOT NULL,
+	[DestStoreNo] [varchar](6) NULL,
+	[StkCountNo] [smallint] NULL,
+	[CountNo] [smallint] NOT NULL,
+	[DocEntStatus] [tinyint] NULL,
+	[DocRow] [smallint] NOT NULL,
+	[PartNo] [varchar](20) NOT NULL,
+	[Serial] [varchar](50) NULL,
+	[Center] [int] NULL,
+	[DocDate] [char](8) NULL,
+	[UntCode] [char](2) NULL,
+	[Qty] [money] NULL,
+	[AudtQty] [money] NULL,
+	[RefConsQty] [money] NULL,
+	[RefOrder] [money] NULL,
+	[Amt] [money] NULL,
+	[CompAmt] [money] NULL,
+	[AudtAmt] [money] NULL,
+	[ConsType] [int] NULL,
+	[RcptType] [int] NULL,
+	[ReqType] [tinyint] NULL,
+	[RtrnStrReason] [tinyint] NULL,
+	[RtrnBuyReason] [tinyint] NULL,
+	[ReqCenter] [int] NULL,
+	[Supplier] [varchar](10) NULL,
+	[OrderNo] [bigint] NULL,
+	[BinNo] [varchar](35) NULL,
+	[RegNo] [int] NULL,
+	[LcNo] [varchar](12) NULL,
+	[NeedDate] [char](8) NULL,
+	[AudtReason] [tinyint] NULL,
+	[PrcDate] [char](8) NULL,
+	[PrcSeqDoc] [smallint] NULL,
+	[RefStatus] [tinyint] NULL,
+	[DetValSeq] [smallint] NULL,
+	[AccDocSeq] [smallint] NULL,
+	[Weight] [money] NULL,
+	[RtnQty] [money] NULL,
+	[RfDocNo] [int] NULL,
+	[RfDocRow] [smallint] NULL,
+	[AccDocNo] [int] NULL,
+	[SetPrice] [tinyint] NULL,
+	[UpdTime] [int] NULL,
+	[SetVoid] [tinyint] NULL,
+	[IsNewYear] [tinyint] NULL,
+	[FactorNo] [varchar](30) NULL,
+	[SalePartNo] [varchar](20) NULL,
+	[SaleQty] [money] NULL,
+	[SaleRow] [smallint] NULL,
+	[TraceKey] [varchar](500) NULL,
+	[StoreAmt] [money] NULL,
+	[Act3] [int] NULL,
+	[TollAmt] [money] NULL,
+	[TaxAmt] [money] NULL,
+	[DocDsc] [varchar](6000) NULL,
+	[FactorDate] [char](8) NULL,
+	[TreatyNo] [varchar](20) NULL,
+	[OldRow] [smallint] NULL,
+	[GdiRefDocNo] [int] NULL,
+	[GdiRefDocRow] [int] NULL,
+	[GdiRefPartNo] [varchar](20) NULL,
+	[GdiRefStore] [varchar](6) NULL,
+	[FromPlaque] [money] NULL,
+	[ToPlaque] [money] NULL,
+	[CntQty] [money] NULL,
+	[OrgPelakNo] [varchar](20) NULL,
+	[FlwCode] [varchar](20) NULL,
+	[DespositRng] [int] NULL,
+	[MeetingDate] [char](8) NULL,
+	[Act4] [int] NULL,
+	[Act5] [int] NULL,
+	[RowVersion] [timestamp] NOT NULL,
+	[RowGuid] [uniqueidentifier] NOT NULL
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[sam_InvHdrData]    Script Date: 07/16/2017 10:48:37 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[sam_InvHdrData](
+	[FiscalYear] [int] NOT NULL,
+	[StoreNo] [varchar](6) NOT NULL,
+	[DocType] [tinyint] NOT NULL,
+	[DocNo] [int] NOT NULL,
+	[CountNo] [smallint] NOT NULL,
+	[DocSeq] [int] NULL,
+	[DestStoreNo] [varchar](6) NULL,
+	[StkCountNo] [smallint] NULL,
+	[DocEntStatus] [tinyint] NULL,
+	[DocStatus] [tinyint] NULL,
+	[UpdateSeq] [smallint] NULL,
+	[SendSeq] [smallint] NULL,
+	[ValueSeq] [smallint] NULL,
+	[AccDocSeq] [smallint] NULL,
+	[SumQty] [money] NULL,
+	[SumAmt] [money] NULL,
+	[CreateDate] [char](8) NULL,
+	[UpdateDate] [char](8) NULL,
+	[MultyMediaDoc] [int] NULL,
+	[MultyMediaDocX] [char](36) NULL,
+	[OrgDocNo] [int] NULL,
+	[OrgRefNo] [int] NULL,
+	[LockInd] [tinyint] NULL,
+	[CnfrmLvl] [smallint] NULL,
+	[EndRcpt] [tinyint] NULL,
+	[RaySys] [varchar](12) NULL,
+	[PriceDocSt] [tinyint] NULL,
+	[DocCounter] [int] NULL,
+	[IsSendAst] [tinyint] NULL,
+	[GdiRefDocNo] [int] NULL,
+	[GdiRefFiscalYear] [int] NULL,
+	[GdiRefDocType] [int] NULL,
+	[BuyType] [smallint] NULL,
+	[SumWeight] [money] NULL,
+	[IsEditAcnt] [tinyint] NULL,
+	[UserId] [varchar](12) NULL,
+	[RowVersion] [timestamp] NOT NULL,
+	[RowGuid] [uniqueidentifier] NOT NULL
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+INSERT [dbo].[sam_InvDtlData] ([FiscalYear], [StoreNo], [DocType], [DocNo], [DestStoreNo], [StkCountNo], [CountNo], [DocEntStatus], [DocRow], [PartNo], [Serial], [Center], [DocDate], [UntCode], [Qty], [AudtQty], [RefConsQty], [RefOrder], [Amt], [CompAmt], [AudtAmt], [ConsType], [RcptType], [ReqType], [RtrnStrReason], [RtrnBuyReason], [ReqCenter], [Supplier], [OrderNo], [BinNo], [RegNo], [LcNo], [NeedDate], [AudtReason], [PrcDate], [PrcSeqDoc], [RefStatus], [DetValSeq], [AccDocSeq], [Weight], [RtnQty], [RfDocNo], [RfDocRow], [AccDocNo], [SetPrice], [UpdTime], [SetVoid], [IsNewYear], [FactorNo], [SalePartNo], [SaleQty], [SaleRow], [TraceKey], [StoreAmt], [Act3], [TollAmt], [TaxAmt], [DocDsc], [FactorDate], [TreatyNo], [OldRow], [GdiRefDocNo], [GdiRefDocRow], [GdiRefPartNo], [GdiRefStore], [FromPlaque], [ToPlaque], [CntQty], [OrgPelakNo], [FlwCode], [DespositRng], [MeetingDate], [Act4], [Act5], [RowGuid]) VALUES (1396, N'2', 62, 96200148, NULL, 0, 0, 1, 1, N'33161116111270', NULL, 3136101, N'13960425', N'1 ', 321.0000, NULL, 0.0000, 0.0000, 593972.0000, NULL, NULL, NULL, 1, 1, NULL, NULL, 3136415, NULL, 1, NULL, NULL, NULL, N'13960426', NULL, N'13960425', 62, NULL, NULL, NULL, 55.0000, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 9170119, NULL, NULL, N' Ê’', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, 34343.0000, NULL, NULL, NULL, NULL, NULL, NULL, N'94ed4598-ce27-4de6-a9d9-cf5966ad7335')
+GO
+INSERT [dbo].[sam_InvHdrData] ([FiscalYear], [StoreNo], [DocType], [DocNo], [CountNo], [DocSeq], [DestStoreNo], [StkCountNo], [DocEntStatus], [DocStatus], [UpdateSeq], [SendSeq], [ValueSeq], [AccDocSeq], [SumQty], [SumAmt], [CreateDate], [UpdateDate], [MultyMediaDoc], [MultyMediaDocX], [OrgDocNo], [OrgRefNo], [LockInd], [CnfrmLvl], [EndRcpt], [RaySys], [PriceDocSt], [DocCounter], [IsSendAst], [GdiRefDocNo], [GdiRefFiscalYear], [GdiRefDocType], [BuyType], [SumWeight], [IsEditAcnt], [UserId], [RowGuid]) VALUES (1396, N'2', 62, 96200148, 0, NULL, NULL, 0, 1, 3, NULL, NULL, NULL, NULL, 321.0000, 593972.0000, N'13960425', N'13960425', NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, 1396, 60, NULL, NULL, 0, N'1', N'e6ff7a14-9790-452d-8218-7143633e7aff')
+GO
